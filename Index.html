@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primera Pagina Web </title>
 </head>
-<body style="background-color: rgb(240, 198, 134);">
+
+
+<body style="background-color: rgb(243, 209, 158);">
   <!--contenedor de nav-->
   <nav id="inicio">
     <a href="#presentacion">PRESENTACION</a> &emsp;
@@ -13,9 +15,11 @@
     <a href="#imagenes">imagenes</a> &emsp;
     <a href="#academia"> lista de academias</a> &emsp;
     <a href="#tabla">tablas de clubes</a> &emsp;
-    <a href="">todo sobre mi persona</a> &emsp;
+    <a href="todosobremipersona.html" target="_blank">todo sobre mi persona</a> &emsp;
 
   </nav>
+<!--con el target=_blank al momento de ingresar a una pagina abre otra y no cierra la principal -->
+
   <h1 id="presentacion" style="font-size: 300%;">BIENVENIDOS</h1> 
   <p> CURSO: LENGUAJES PARA DESARROLLO Y SOPORTE DE SISTEMAS
 
@@ -69,7 +73,13 @@
 <hr>
 
 <h2 id="academia">uso de listas </h2>
-  <p>CONOCIMIENTOS PREVIOS PARA HTML en orden metadologico</p> 
+ <div style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+             color: antiquewhite;
+             background-color:rgb(221, 195, 49)
+             "> 
+
+
+   <p>CONOCIMIENTOS PREVIOS PARA HTML en orden metadologico</p> 
 
     <ol type="A">
      <li>ofimatica basica</li>
@@ -77,6 +87,10 @@
      <li>instalacion y desintalacion de programas</li>
 
     </ol>
+ </div>
+
+
+
  <p>Cualidades y buenas practicas a seguir</p>
   <ul>
     <li>capacidad de atencion</li>
@@ -86,6 +100,8 @@
 
 
   </ul> 
+
+
   <a href="#inicio" >Volver al inicio</a>
 
 </p>
@@ -135,5 +151,55 @@
 <hr>
 <h2>USO DE AUDIO</h2>
   <audio src=""></audio>
+
+<hr>
+<h2>USO DE FORMULARIO</h2>
+<form action="todosobremipersona.html" method="post" >
+
+<p> <label for="NOMBRE">Nombre: <input type="text" id="NOMBRE" required>   </label> </p>
+<p> <label for="APELLIDO">Apellido: <input type="text" id="APELLIDO">   </label> </p>
+<p> <label for="EDAD">Edad: <input type="number" id="EDAD" min="18" max="80">   </label> </p>
+
+<p> <label for="observacion"> Observacion
+         <textarea name="observacion" id="observacion" 
+         style="height: 180px; width: 300px;font-size: 25px;">
+          
+         </textarea>
+
+
+     </label> 
+</p>
+
+
+<p>
+    <label for="estatura">Estatura
+      <select name="grupoestatura" id="estatura">
+        <option value="seleccione">Seleccione</option>
+        <option value="menor de 1.50m">menor de 1.50m</option>
+        <option value="de 1.50m a 1.59m">de 1.50m a 1.59m</option>
+        <option value="de 1.60m a 1.69m">de 1.60m a 1.69m</option>
+        <option value="mayor o igual a 1.70m">mayor o igual a 1.70m</option>
+      </select>
+    </label>  
+
+</p>
+
+<p> <label>Cursos llevados</label>
+  <br>
+     <input type="checkbox" name="cursos" value="matematica" id="matematica">
+       <label for="matematica">Matematica</label> <br>
+     <input type="checkbox" name="cursos" value="">  
+     <input type="checkbox" name="cursos" value="">  
+     <input type="checkbox" name="cursos" value="">  
+
+
+</p>
+
+<button type="submit" style="font-size: 25px;"> ENVIAR </button>
+</form>
+
+
 </body>
+
+
 </html>
