@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primera Pagina Web </title>
+    <link rel="stylesheet" type="text/css" href="Estilos1.css"/>
 </head>
 
 
-<body style="background-color: rgb(243, 209, 158);">
+<body>
   <!--contenedor de nav-->
   <nav id="inicio">
     <a href="#presentacion">PRESENTACION</a> &emsp;
@@ -154,13 +155,13 @@
 
 <hr>
 <h2>USO DE FORMULARIO</h2>
-<form action="todosobremipersona.html" method="post" >
+<form action="todosobremipersona.html" method="post" target="_blank">
+<!--tarjet= "blanck" me permite abrir el enlace en otra pagina web.-->
+<p> <label for="NOMBRE">Nombre: <input type="text" id="NOMBRE" name="nombre" required autofocus>   </label> </p>
+<p> <label for="APELLIDO">Apellido: <input type="text" id="APELLIDO" name="apellido">   </label> </p>
+<p> <label for="EDAD">Edad: <input type="number" id="EDAD" name="edad" min="18" max="80">   </label> </p>
 
-<p> <label for="NOMBRE">Nombre: <input type="text" id="NOMBRE" required>   </label> </p>
-<p> <label for="APELLIDO">Apellido: <input type="text" id="APELLIDO">   </label> </p>
-<p> <label for="EDAD">Edad: <input type="number" id="EDAD" min="18" max="80">   </label> </p>
-
-<p> <label for="observacion"> Observacion
+<p> <label for="observacion"> Observacion <br>
          <textarea name="observacion" id="observacion" 
          style="height: 180px; width: 300px;font-size: 25px;">
           
@@ -189,11 +190,66 @@
      <input type="checkbox" name="cursos" value="matematica" id="matematica">
        <label for="matematica">Matematica</label> <br>
      <input type="checkbox" name="cursos" value="">  
+       <label for="matematica">Comunicación</label> <br>
+     <input type="checkbox" name="cursos" value=""> 
+       <label for="matematica">Financiamiento</label> <br> 
      <input type="checkbox" name="cursos" value="">  
-     <input type="checkbox" name="cursos" value="">  
-
+       <label for="matematica">Marketing</label> <br>
 
 </p>
+
+<br> 
+
+<p><label>Ciclo actual</label></p>
+<input style="scale: 1.5;" id="primero" type="radio" name="ciclo" value="primero">
+<label for="primero">Primero</label> <br>
+<input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+<label for="segundo">Segundo</label> <br>
+<input style="scale: 1.5;" id="tercero" type="radio" name="ciclo" value="tercero">
+<label for="tercero">Tercero</label> <br>
+<input style="scale: 1.5;" id="cuarto" type="radio" name="ciclo" value="cuarto">
+<label for="cuarto">Cuarto</label> <br>
+<input style="scale: 1.5;" id="quinto" type="radio" name="ciclo" value="quinto">
+<label for="primero">Primero</label> <br>
+<input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+<label for="segundo">Segundo</label> <br>
+
+<br>
+
+<label for="fecha">SELECCIONE FECHA: <br>
+   <input style="font-size: 25px;" type="date" name="fecha" id="fecha"
+   min="2025-09-01" max="2025-12-31">
+</label>
+ <br> <br>
+
+ <label for="clave">Contraseña: <br>
+   <input type="password" id="clave" name="clave" minlength="8" maxlength="12"
+   placeholder=""> 
+
+ </label>
+
+ <br><br>
+
+  <label for="correo">Correo electronico: <br>
+   <input type="email" id="correo" name="correo" placeholder="@certus.edu.pe" required 
+   pattern="[a-zA-Z0-9]+@certus\.edu\.pe"> 
+ </label>
+
+ <br><br>
+
+ <label for="usuario">Nombre de usuario: <br>
+  <input type="text" id="usuario" name="usuario" required 
+  minlength="5" y maxlength="20" 
+  pattern="[AZa-z0-9]+" >
+ </label>
+
+  <br><br>
+
+  <label for="resetear">limpiar: <br>
+   <input type="reset" id="resetear" name="resetear"> 
+ </label>
+<!--hola-->
+ <br> <br>
 
 <button type="submit" style="font-size: 25px;"> ENVIAR </button>
 </form>
