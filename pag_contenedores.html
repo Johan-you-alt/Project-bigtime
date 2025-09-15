@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+   
     <div class="contenedor">
         <header>
             <h1>CROISSANT & COFFEE</h1>
@@ -27,30 +27,74 @@
 
         <main>
             
-            <section>
+            <section style="background-image:url('croisantp.jpg');
+            background-repeat: no-repeat ; background-position:50px ;
+            background-attachment: fixed; background-size: 800px; "
+        >
                 <article>
-                    <h2>PANES</h2>
-                    <p>CATALOGO:</p>
+                    <h2>PANES CON MASAMADRE</h2>
+                    <p>el pan de masa madre puede considerarse más saludable que otros panes debido a que el proceso de fermentación mejora la digestibilidad,
+                         aumenta la disponibilidad de nutrientes como minerales y folato, tiene un bajo índice glucémico, contiene probióticos para la salud intestinal y su acidez inhibe el crecimiento de moho.</p>
+                         <p>CATALOGO:</p>
                 </article>
                 <article>
                     <h2>CAFÉS</h2>
-                    <p>CATALOGO:Mejora la memoria y concentración, previene la depresión,Aumenta la energía y reduce la fatiga,
+                    <p>Mejora la memoria y concentración, previene la depresión,Aumenta la energía y reduce la fatiga,
                         rico en antioxidantes y Mantiene la juventud, estos beneficios hacen del café una bebida popular y 
                          valiosa para la salud, siempre que se consuma en cantidades moderadas y sin azúcar ni aditivos.</p>
+                         <p>CATALOGO:</p>
                     <p>ESSPRESO</p>
-                    <img class=".marget_imagens" src="" alt="">
+                    <img class="marget_imagens" src="" alt="">
                 </article>
             </section>
-            
-            <aside>
-                <h3>ENLACES EXTERNOS</h3>
-                <p><a href="https://www.rayvi-cafe.com/" target="_blank">Nuestro abastecedor de café</a></p>
-                <p><a href="https://www.instagram.com/croissantycaffe/" target="_blank">Nuestro Instagram</a></p>
-            </aside>
 
-            <img src="tu-imagen.png" alt="Descripción de la imagen" class="imagen-flotante">
+            <div>
+             <aside  >
+                 <h3>ENLACES EXTERNOS</h3>
+                 <p><a class="color_link" href="https://www.rayvi-cafe.com/" target="_blank">Nuestro abastecedor de café</a></p>
+                 <p><a href="https://www.instagram.com/croissantycaffe/" target="_blank">Nuestro Instagram</a></p>
+             </aside>
+              <!--tarea añadir dos Pseudo-class y elemento más-->
+             <aside class="aside_imagenes">
+                <h3 class="primera_letra">Fotos</h3>
+                 <img src="granoscafe1.jpg" alt="">
+                 <img src="" alt="">
+             </aside>
+            </div>
         </main>
 
+        <section>
+            <article>
+                <h2>Pocisionamiento</h2>
+                <div style="display: inline-block;">
+                    <p class="clase_static">1er texto, con STATIC</p>
+                </div>
+                <div style="display: inline-block;">
+                    <p>2do texto, sin STATIC en la misma linea</p>
+                </div>
+
+                            <h2>Pocisionamiento CON STATIC </h2>
+                <div style="display: inline-block;">
+                    <p class="clase_static">1er texto, con STATIC</p>
+                </div>
+                <div style="display: inline-block;">
+                    <p>2do texto, sin STATIC en la misma linea</p>
+                </div>
+            </article>
+            <article>
+                <p>Posicionamiento relative </p>
+                <div style="display: inline-block;">
+                    <p class="clase_relative">TEXTO CON POCISIONAMIENTO RELATIVE en un bloque inline</p>
+                    <img class="clase_relative"
+                    style="border: 9px dotted; color: orange;"
+                    src="soquer.png" alt="imagen no encontrada"
+                    width="400" height="341">
+                </div>
+                <div style="display: inline-block;">
+                    <p>2do texto en misma linea</p>
+                </div>
+            </article>
+        </section>
 
         <footer>
             <p>Derechos reservados &copy; 2025 - CROSANT & COFFE</p>

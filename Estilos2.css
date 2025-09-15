@@ -1,6 +1,7 @@
 body {
             font-family: Arial, sans-serif;
             margin: 0;
+
         }
         header, nav, main, aside, footer {
             padding: 20px;
@@ -30,11 +31,12 @@ body {
             margin: 10px;
         }
         aside {
-            flex: 0;
+            flex: 1;
             background-color: #99a7d6;
             padding: 10px;
             height: 200px;
             width: 150px;
+            flex-direction: column; /*coloca a los asides en una columna*/
         }
         footer {
             background-color: #222;
@@ -46,7 +48,7 @@ body {
             background-color: #d1dfa1;
             margin-bottom: 10px;
             padding: 10px;
-            border: 1px solid #cccccc;
+            border: 5px solid #cccccc;
         }
         .contenedor {
             max-width: 1280px;
@@ -56,8 +58,58 @@ body {
         .marget_imagens {
             margin: 20px;
         }
-.imagen-flotante {
+    .imagen-flotante {
   position: fixed;
   top: 20px;       /* Distancia desde la parte superior */
   right: 20px;     /* Distancia desde la derecha */
+}
+
+.aside_imagenes {
+    background-color: azure;
+}
+
+.color_link {
+    color: blue;
+}
+
+.color_link:hover {
+    color: brown;
+    background-color: coral;
+}
+
+.primera_letra {
+
+    color: #b92b2b;
+
+}
+
+.primera_letra::first-letter {
+    color: aqua;
+    font-size: 150pxs;
+}
+
+.color_link:first-child { font-weight: bold; }
+
+.color_link::before { 
+    content: "💡";
+}
+
+.clase_static { 
+    font-size: 20px;
+    background-color: white;
+    position: static;
+    margin-left: 80px;
+    margin-right: 200px;
+}
+.clase_relative {
+    font-size: 20px;
+    background-color: #4CAF50;
+    height: 250px;
+    width: 200px;
+}
+
+.clase_relative:hover {
+    position: relative;
+    top: 100px;
+    left: 100px;
 }
