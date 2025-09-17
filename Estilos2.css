@@ -1,4 +1,4 @@
-body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
 
@@ -59,10 +59,10 @@ body {
             margin: 20px;
         }
     .imagen-flotante {
-  position: fixed;
-  top: 20px;       /* Distancia desde la parte superior */
-  right: 20px;     /* Distancia desde la derecha */
-}
+       position: fixed;
+       top: 20px;       /* Distancia desde la parte superior */
+       right: 20px;     /* Distancia desde la derecha */
+       }
 
 .aside_imagenes {
     background-color: azure;
@@ -100,10 +100,19 @@ body {
     position: static;
     margin-left: 80px;
     margin-right: 200px;
+
+.clase_static2 {
+    font-size: 20px;
+    background-color: white;
+    position: static;
+    margin-left: 80px;
+    margin-right: 200px;
+}
+
 }
 .clase_relative {
     font-size: 20px;
-    background-color: #4CAF50;
+    background-color: green;
     height: 250px;
     width: 200px;
 }
@@ -112,4 +121,72 @@ body {
     position: relative;
     top: 100px;
     left: 100px;
+}
+/*Al usar position relative en la pseudoclase Hover, position se activa cuando se posiciona el mouse en la 
+imagen. Notese que como se ha utilizado top y left, esto causa la superposición de elementos .*/
+
+.clase_relative2 {
+    font-size: 17px;
+    background-color: green;
+    height: 250px;
+    width: 200px;
+}
+
+.clase_relative2:hover {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+/*Al usar position relative en la pseudoclase Hover, position se activa cuando se posiciona el mouse en la imagen.
+Notese que como se ha utilizado Margin-top y Margin-left, esto causa la NO superposición de elementos , es
+decirseacomodalaposiciónparanogenerarcruces.*/
+
+.clase_relative3 {
+    font-size: 17px;
+    background-color: green;
+    height: 250px;
+    width: 200px;
+}
+
+.clase_relative3:hover {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    z-index: -10;
+}
+/*OJO:
+Signo (-) inidica hacia atrás
+Signo (+) inidica hacia adelante*/
+
+.clase_Absolute {
+    font-size: 20px;
+    background-color: yellow;
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+/*En la parte donde se coloco el código de position
+absolute no aparece la imagen correspondiente, y el
+texto que estaba en inline-block ocupo su lugar
+La imagen que esta en position absolute se ubico en
+la posición configurada, respecto al inicio del Body*/
+
+.clase_Relative4 {
+    font-size: 20px;
+    background-color: orange;
+    height: 200px;
+    width: 150px;
+    position: relative;
+    
+}
+.clase_AbsoluteRelative {
+    font-size: 20px;
+    background-color: orange;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 300px;
+    left: 600px;
 }

@@ -54,7 +54,7 @@
                  <p><a class="color_link" href="https://www.rayvi-cafe.com/" target="_blank">Nuestro abastecedor de café</a></p>
                  <p><a href="https://www.instagram.com/croissantycaffe/" target="_blank">Nuestro Instagram</a></p>
              </aside>
-              <!--tarea añadir dos Pseudo-class y elemento más-->
+              
              <aside class="aside_imagenes">
                 <h3 class="primera_letra">Fotos</h3>
                  <img src="granoscafe1.jpg" alt="">
@@ -65,34 +65,91 @@
 
         <section>
             <article>
-                <h2>Pocisionamiento</h2>
+                <h2>POSICIONAMIENTO STATIC (CON MARGIN-TOP) </h2>
                 <div style="display: inline-block;">
                     <p class="clase_static">1er texto, con STATIC</p>
                 </div>
+
                 <div style="display: inline-block;">
                     <p>2do texto, sin STATIC en la misma linea</p>
                 </div>
 
-                            <h2>Pocisionamiento CON STATIC </h2>
+
+                <h2>POSICIONAMIENTO STATIC 2(SIN MARGIN-TOP)</h2>
                 <div style="display: inline-block;">
-                    <p class="clase_static">1er texto, con STATIC</p>
+                    <p class="clase_static2">1er texto, con STATIC</p>
                 </div>
+
                 <div style="display: inline-block;">
-                    <p>2do texto, sin STATIC en la misma linea</p>
+                    <p style="background-color: orange;">2do texto, sin STATIC en la misma linea</p>
                 </div>
             </article>
+
             <article>
-                <p>Posicionamiento relative </p>
+                <p>POSICIONAMIENTO RELATIVE </p>
                 <div style="display: inline-block;">
-                    <p class="clase_relative">TEXTO CON POCISIONAMIENTO RELATIVE en un bloque inline</p>
+                    <p class="clase_relative">Al usar position relative en la pseudoclase Hover, position se activa
+                                              cuando se posiciona el mouse en la imagen. Notese que como se ha utilizado top y left,
+                                              esto causa la superposición de elementos </p>
                     <img class="clase_relative"
-                    style="border: 9px dotted; color: orange;"
+                    style="border: 9px dotted; color: red;"
                     src="soquer.png" alt="imagen no encontrada"
                     width="400" height="341">
                 </div>
                 <div style="display: inline-block;">
-                    <p>2do texto en misma linea</p>
+                    <p>2do v1.1 texto en misma linea</p>
                 </div>
+
+                <p>POSICIONAMIENTO RELATIVE</p>
+                <div style="display: inline-block;">
+                    <p class="clase_relative2">Al usar position relative en la pseudoclase Hover, position se activa cuando se posiciona el mouse en la imagen.
+                                              Notese que como se ha utilizado Margin-top y Margin-left, esto causa la NO superposición de elementos , es
+                                              decir se acomoda la posición para no generar cruces.</p>
+                    <img class="clase_relative2"
+                    style="border: 9px dotted; color: rgb(0, 255, 21);"
+                    src="soquer.png" alt="imagen no encontrada"
+                    width="400" height="341">
+                </div>
+                <div style="display: inline-block;">
+                    <p>2do v1.2 texto en misma linea</p>
+                </div>
+
+                    <p>POSICIONAMIENTO RELATIVE</p>
+                <div style="display: inline-block;">
+                    <p class="clase_relative3">Según el resultado de position relative hubi una superposición de la imagen a los textos.
+                                               Si queremos que la superposicion quede al revés, es decir, que el texto este encima de la imagen.
+                                               Utilizar la propiedad z-index.</p>
+                    <img class="clase_relative3"
+                    style="border: 9px dotted; color: rgb(0, 174, 255);"
+                    src="soquer.png" alt="imagen no encontrada"
+                    width="400" height="341">
+                </div>
+                <div style="display: inline-block;">
+                    <p>2do v1.3 texto en misma linea</p>
+                </div>
+                
+                <h2>POSICIONAMIENTO ABSOLUTO RESPECTO A LA PAGINA PRINCIPAL</h2>
+                <div style="display: inline-block;">
+                    <img class="clase_Absolute" 
+                    style="border: 9px dotted;color: orange;"
+                    src="soquer.png" alt="imagen no encontrada"
+                    width="400px" height="341px">
+                </div>
+                <div style="display: inline-block;">
+                    <p>2do v1.4 texto position absolute en la misma linea</p>
+                </div>
+
+                <h2>POSICIONAMIENTO ABSOLUTE RESPECTO A RELATIVE </h2>
+                <DIV style="display: inline-block;" class="clase_Relative4">
+                    <p>la imagen es absolute respecto al DIV relative</p>
+                    <img class="clase_AbsoluteRelative"
+                    style="border: 9px dotted;color: blueviolet;"
+                    src="soquer.png" alt="imagen no encontrada"
+                    width="400px" height="341px">
+                </DIV>
+                <DIV style="display: inline-block;">
+                    <h2>2do texto position adsolute relative en misma linea</h2>
+                </DIV>
             </article>
         </section>
 
