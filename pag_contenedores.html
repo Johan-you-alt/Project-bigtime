@@ -131,8 +131,8 @@
                 <h2>POSICIONAMIENTO ABSOLUTO RESPECTO A LA PAGINA PRINCIPAL</h2>
                 <div style="display: inline-block;">
                     <img class="clase_Absolute" 
-                    style="border: 9px dotted;color: orange;"
-                    src="soquer.png" alt="imagen no encontrada"
+                    style="border: 9px double;color: rgb(163, 111, 14);"
+                    src="imagenes2/croisantmasa.webp" alt="imagen no encontrada"
                     width="400px" height="341px">
                 </div>
                 <div style="display: inline-block;">
@@ -140,17 +140,93 @@
                 </div>
 
                 <h2>POSICIONAMIENTO ABSOLUTE RESPECTO A RELATIVE </h2>
-                <DIV style="display: inline-block;" class="clase_Relative4">
+                <DIV style="display: inline-block;" class="clase_relative4">
                     <p>la imagen es absolute respecto al DIV relative</p>
                     <img class="clase_AbsoluteRelative"
-                    style="border: 9px dotted;color: blueviolet;"
-                    src="soquer.png" alt="imagen no encontrada"
-                    width="400px" height="341px">
+                       style="border: 9px dotted;color: blueviolet;"
+                       src="soquer.png" alt="imagen no encontrada"
+                       width="400px" height="341px">
                 </DIV>
                 <DIV style="display: inline-block;">
                     <h2>2do texto position adsolute relative en misma linea</h2>
                 </DIV>
+
+                <h2>POSICIONAMIENTO FIXED</h2>
+                <div><!--si colocas a div style="height se restringira su altura-->
+                    <img class="clase_Fixed ; marcaagua" 
+                       style="border: 9px solid;color: rgb(102, 133, 153);"
+                       src="soquer.png" alt="imagen no encontrada"
+                       width="400px" height="341px">
+                </div>
+
+                <h2>POSICIONAMIENTO STICKY</h2>
+                <div>
+                    <img class="clase_sticky" 
+                       style="border: 9px double;color: rgb(18, 130, 204);"
+                       src="soquer.png" alt="imagen no encontrada"
+                       width="300px" height="400px">
+                    <p style="font-size: 20px;">TEXTO PARA STICKY,IMPORTANTE:
+                                             El contenedor es el div, que abarcar el tamaño según el height. <br>
+                                             La imagen es position sticky, que se
+                                             mantendrá fijo hasta las dimensiones del div<br>
+                </div>
+
+                <p class="texto_1"> <br>
+                    Posicionamiento de cajas Float: <br>
+                    Es una propiedad que puede tomar los valores right, left, none (predefinido) e inherit. Lo que provoca es que el
+                    elemento flote hacia el lado indicado de su contenedor. Cuando un elemento flota, deja el hueco que ocupaba y otro
+                    puede ocupar su ubicación anterior. <br>
+
+                    La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los
+                    elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la
+                    página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).      
+                </p>
+                
+                <div>
+                    <img class="class_float_rigth2"
+                    style="border: 9px; double ; color: mediumvioletred;"
+                    src="granoscafe1.jpg" alt="granos de cafe"
+                    width="300px" height="400px">
+                    <p style="font-size: 20px;">
+                        Posicionamiento de caja Float <br>
+                        Es una propiedad que puede tomar los valores right, left, none (predefinido) e inherit. Lo que provoca es que el
+                        elemento flote hacia el lado indicado de su contenedor. Cuando un elemento flota, deja el hueco que ocupaba y otro
+                        puede ocupar su ubicación anterior.
+
+                        La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los
+                        elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la
+                        página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).
+                    </p>
+                </div>
             </article>
+
+            <article>
+                <h2>Uso de la Visualización Display</h2>
+                <div class="tiponone">Elemento de estilo none</div>
+                
+                <div class="enlinea">Elemento 1 de inline</div>
+                <div class="enlinea">Elemento 2 de inline</div>
+                <div class="tipoinlineblock">Elemento 3 de inline-block</div>
+
+                <h2>Elemento oculto mediante visibility hidden</h2>
+
+                <div class="tipohidden">Elemento 3 de estilo hidden</div>
+
+                <h2>Uso de Display Grip</h2>
+                <h2>signficado de escudos</h2>
+                <div class="contenedor-grid">
+                    <div class="item"> <img src="" alt="" height="200" width="200"> </div>
+
+                    <div class="item">  <img src="" alt="" height="200" width="200"></div>
+
+                    <div class="item">ESCUDO 1 </div>
+                    <div class="item">ESCUDO 2</div>
+                    <div class="item">Legio de reconocimiento</div>
+                    <div class="item">POLICIA MILITAR</div>
+                </div>
+            </article>
+
+            
         </section>
 
         <footer>

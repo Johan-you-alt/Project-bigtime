@@ -27,7 +27,7 @@
             flex: 2;
             background-color: #b92b2b;
             padding: 10px;
-            border: 10px;
+            border: 10px solid;
             margin: 10px;
         }
         aside {
@@ -152,20 +152,21 @@ decirseacomodalaposiciónparanogenerarcruces.*/
     position: relative;
     top: 100px;
     left: 100px;
-    z-index: -10;
-}
-/*OJO:
+    z-index: -10; /*OJO:
 Signo (-) inidica hacia atrás
 Signo (+) inidica hacia adelante*/
+}
+
 
 .clase_Absolute {
     font-size: 20px;
-    background-color: yellow;
-    height: 250px;
-    width: 200px;
+    background-color: rgb(228, 189, 15);
+    height: 150px;
+    width: 150px;
     position: absolute;
-    top: 200px;
-    left: 100px;
+    top: 20px;/*empuja la imagen desde arriba top=arriba*/
+    left: 450px;/*empuja la imagen desde la izquierda left=izqueirda */
+
 }
 /*En la parte donde se coloco el código de position
 absolute no aparece la imagen correspondiente, y el
@@ -173,11 +174,11 @@ texto que estaba en inline-block ocupo su lugar
 La imagen que esta en position absolute se ubico en
 la posición configurada, respecto al inicio del Body*/
 
-.clase_Relative4 {
+.clase_relative4 {
     font-size: 20px;
     background-color: orange;
     height: 200px;
-    width: 150px;
+    width: 200px;
     position: relative;
     
 }
@@ -187,6 +188,97 @@ la posición configurada, respecto al inicio del Body*/
     height: 200px;
     width: 150px;
     position: absolute;
-    bottom: 300px;
+    bottom: 150px;
     left: 600px;
+    z-index: -5;
+}
+.clase_Fixed {
+    height: 200px;
+    width: 150px;
+    position: fixed;
+    left: 750px;
+    bottom: 0px;
+}
+.marcaagua {
+    opacity: 0.1;
+    pointer-events: none; /*se encarga que la marca de agua,no le afecte nada o ninguna complicación*/
+    z-index: 999;
+}
+
+.clase_sticky {
+    position: sticky;
+    font-size: 20px;
+    top: 8px;
+    left: 48px;
+    height: 300px;
+}
+.texto_1 {
+    font-size: 20px;
+}
+
+.class_float_rigth2{
+    float: right;
+    background-color: bisque;
+    margin: 5px;
+}
+
+.enlinea {
+    background-color: red;
+    display: inline;
+    font-size: 30px;
+    margin: 2px;
+    color: azure;
+    width: 80px;
+    height: 40px;
+}
+
+.tipoinlineblock{
+    background-color: rebeccapurple;
+    font-size: 30px;
+    margin: 10px;
+    color: #d1dfa1;
+    display: inline-block;
+    height: 500px;
+}
+.bloque{
+    background-color: orange;
+    font-size: 30px;
+    margin: 10px;
+    color: #cccccc;
+}
+.tiponone{
+    background-color: blue;
+    font-size: 20px;
+    margin: 20px;
+    color: #cccccc;
+    display:none;
+}
+
+.tipohidden{
+    background-color: blue;
+    font-size: 20px;
+    margin: 20px;
+    color: #cccccc;
+    visibility: hidden;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 15px; /* Espacio entre celdas */
+}
+
+.item img {
+     max-width: 100%; /* Para que no se desborde */
+}
+
+.item {
+ display: flex;
+  background-color: lightcoral;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #333;
+  font-size: 30px;
+   justify-content: center;  /* Centrar horizontalmente */
+  align-items: center;      /* Centrar verticalmente */
 }
