@@ -100,16 +100,17 @@
     position: static;
     margin-left: 80px;
     margin-right: 200px;
-
+}
 .clase_static2 {
     font-size: 20px;
     background-color: white;
     position: static;
     margin-left: 80px;
-    margin-right: 200px;
+    margin-right: 200px
 }
 
-}
+
+
 .clase_relative {
     font-size: 20px;
     background-color: green;
@@ -281,4 +282,58 @@ la posición configurada, respecto al inicio del Body*/
   font-size: 30px;
    justify-content: center;  /* Centrar horizontalmente */
   align-items: center;      /* Centrar verticalmente */
+}
+
+#Mivideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; /*Asegura que el video ocupe al menos todo el ancho de su contenedor */
+    min-height: 100%; /*Asegura que el video ocupe al menos todo el alto de su contenedor */
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover; /*imagen de fondo cubra todo el contenedor,
+                             incluso si tienes que recortarla o agrandarla. */
+    overflow: hidden; /*Oculta cualquier contenido que se salga del área visible del elemento */
+}
+
+.claseNav { /*estilo para nav*/
+background-color: #d1dfa1;
+font-size: 15px;
+/*margin: 20px*/
+padding-inline: 0px;
+color: black;
+display: inline;
+list-style-type: none;
+}
+.claseNav a:hover{
+    background-color: coral;
+}
+
+.claseNav ul{
+    list-style-type: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.claseNav li a {
+    text-decoration: none;
+    padding: 0px;
+    display: block;
+}
+
+.claseNav >li {
+    float: left;
+}
+
+.claseNav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.claseNav li:hover>ul{
+    display: block;
 }

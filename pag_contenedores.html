@@ -22,6 +22,23 @@
             <a href="#">PRODUCTOS</a>
             <a href="#">FORMULARIOS</a>
             <a href="#">Contacto</a>
+           
+            <ul class="claseNav">
+                <li> <a href="https://www.grupolonato.com/">GRUPO LONATO</a>
+                    <ul><!--INICIO DE SUBMENU-->
+                        <li><a href="https://www.croissantycaffe.pe/">Croissant & Caffe</a></li>
+                        <li><a href="https://www.lacaffetteria.pe/">La Cafeteria DI Lonato</a></li>
+                    </ul>
+                </li>
+
+                <li> <a href="https://www.cafeteria.panatelier.com.pe/">CAFETERIA ARTESANAL</a>
+                    <ul><!--INICIO DE SUBMENU-->
+                        <li><a href="https://www.cafeteria.panatelier.com.pe/#dulces">DULCES</a></li>
+                        <li><a href="https://www.cafeteria.panatelier.com.pe/#saladitos">SALADITOS</a></li>
+                    </ul>
+                </li>
+            </ul>
+
         </nav>
 
 
@@ -201,6 +218,7 @@
             </article>
 
             <article>
+
                 <h2>Uso de la Visualización Display</h2>
                 <div class="tiponone">Elemento de estilo none</div>
                 
@@ -224,10 +242,50 @@
                     <div class="item">Legio de reconocimiento</div>
                     <div class="item">POLICIA MILITAR</div>
                 </div>
-            </article>
 
+                <video autoplay muted loop id="Mivideo">
+                    <source src="videodefondo.webm" type="video/webm">
+                    tu navegador no soporta videos HTML5.
+                </video>
+            </article>
             
         </section>
+
+        <section>
+            <article> <h2>JAVASCRIPT</h2>
+                <div style="font-size: 30px;">
+                    Contenedor resultado
+                
+                    <div id="resultado" style="font-size: 30px;">
+                     <p> Operación suma </p>
+
+                    </div>
+               </div>
+               <script>
+                window.alert("Bienvenidos")
+                var valor1 = 40;  var valor2 = 60;
+                var suma = valor1 + valor2;  var resta = valor1 - valor2;
+                document.write("<br><br><br> FIN DE PAGINA");
+
+                console.log("El valor de la suma de ",valor1," con ",valor2,"es :",suma);
+                console.log("El valor de la resta de ",valor1," con ",valor2,"es :",resta);
+                document.getElementById('resultado').innerHTML="<br>El valor de la suma de "+valor1+" con "+valor2+" es :"+suma+ "<br>" + "El valor de la resta de "+valor1+" con "+valor2+" es :"+resta;
+
+
+
+
+               </script>
+
+            </article>
+        </section>
+
+
+
+
+        <video autoplay muted loop id="Mivideo">
+                    <source src="videodefondo.webm" type="video/webm">
+                    tu navegador no soporta videos HTML5.
+        </video>
 
         <footer>
             <p>Derechos reservados &copy; 2025 - CROSANT & COFFE</p>
