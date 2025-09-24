@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIENDA VIRTUAL CAFETETERIA</title>
     <link rel="stylesheet" type="text/css" href="Estilos2.css"/>
+    <script type="text/javascript" src="script1.js" ></script> <!--vincular html con javascript-->
 </head>
 
 <body>
@@ -252,7 +253,7 @@
         </section>
 
         <section>
-            <article> <h2>JAVASCRIPT</h2>
+            <article> <h2>JAVASCRIPT MODO INTERNAL</h2>
                 <div style="font-size: 30px;">
                     Contenedor resultado
                 
@@ -271,11 +272,36 @@
                 console.log("El valor de la resta de ",valor1," con ",valor2,"es :",resta);
                 document.getElementById('resultado').innerHTML="<br>El valor de la suma de "+valor1+" con "+valor2+" es :"+suma+ "<br>" + "El valor de la resta de "+valor1+" con "+valor2+" es :"+resta;
 
-
-
+                document.write("  <ul align='right'  style='color:rgb(47, 59, 34)'> " + 
+                " <li>Capacidad de atencion</li> " +
+                    " <li>Consultar dudas no resueltas</li> " +
+                    " <li>Repasar temas y realizar tareas en casa</li>" +
+                " </ul> ") ;
 
                </script>
+               
+               <!--MANIPULACION DEL DOM-->
+               <h1 style="font-size: 30px;">EJEMPLO DE MANIPULACION DEL DOM </h1>
+               <p id="ejmDOM1" style="font-size: 25px;">Este es el primer texto a aplicar DOM</p>
 
+               <p class="classDOM1" style="font-size: 25px;">Texto1 a aplicar DOM mediante clase</p>
+
+               <p class="classDOM1" style="font-size: 25px;">Texto2 a aplicar DOM mediante clase</p>
+
+               <h2 class="classDOM1" style="font-size: 25px;">Texto a aplicar DOM mediante TAG</h2>
+
+               <button style="font-size: 25px;"onclick="FCambioColor()">CAMBIAR COLOR POR ID</button>
+
+               <button style="font-size: 25px;"onclick="FCambioClase1()">CAMBIAR POR CLASE </button>
+               <button style="font-size: 25px;"onclick="FCambioTag1()">CAMBIAR POR TAG H2</button>
+               <button style="font-size: 25px;"onclick="FCrear1()">Crear lista viñetas</button>
+               <button style="font-size: 25px;"onclick="FAgregarTextoPermanete()">Crear lista viñetas</button>
+               
+               <h2  style="font-size: 30px;">Creacion de elementos en linea  ></h2> <br>
+               <button onclick="FCrearElemento()">Crear elemento</button>
+               <div id="complementario1">Datos complementarios del estudiante:
+               </div>
+ 
             </article>
         </section>
 
