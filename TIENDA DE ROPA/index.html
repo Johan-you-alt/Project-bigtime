@@ -1,14 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu tienda de ropa</title>
+    <title>Clothing Store - Pedido y Cálculos</title>
+    
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1>Clothing Store</h1>
+    <header class="main-header">
+        <div class="menu-toggle" id="menutoggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-center">
+            <h1>Clothing Store</h1>
+        </div>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <a href="./pages/login.html" id="userIconLink"><i class="fas fa-user"></i></a>
+            <a href="./pages/cart.html" id="shoppingCartLink"><i class="fas fa-shopping-cart"></i></a>
+        </div>
     </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+            <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#catalogo">Catálogo de Productos</a></li>
+                <li><a href="#formulario-calculos">Formulario y Cálculos</a></li>
+                <hr>
+                <li><a href="./pages/login.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="overlay" id="overlay"></div> 
+
+    <main class="watermarked">
+        <section id="catalogo" class="content-section">
+            <h2>Catálogo de Productos</h2>
+            <p>Selecciona los productos y la cantidad deseada para tu pedido.</p>
+            <table id="product-catalog-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Foto</th> 
+                        <th>Producto</th>
+                        <th>Precio Unitario (S/)</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-product-id="P001" data-product-price="25.00">
+                        <td>P001</td>
+                        <td class="product-image-cell"><img src="./assets/images/camisa1.webp" alt="Camisa Casual de Mujer" class="product-thumb"></td>
+                        <td>Camisa Casual de Mujer</td>
+                        <td>25.00</td>
+                        <td><input type="number" class="product-quantity" min="0" value="0" data-id="P001"></td>
+                    </tr>
+                    <tr data-product-id="P002" data-product-price="40.00">
+                        <td>P002</td>
+                        <td class="product-image-cell"><img src="./assets/images/camisahombre2.webp" alt="Camisa a cuadros para Hombre" class="product-thumb"></td>
+                        <td>Camisa a cuadros para Hombre</td>
+                        <td>40.00</td>
+                        <td><input type="number" class="product-quantity" min="0" value="0" data-id="P002"></td>
+                    </tr>
+                    <tr data-product-id="P003" data-product-price="35.00">
+                        <td>P003</td>
+                        <td class="product-image-cell"><img src="./assets/images/chompa1.jpg" alt="Chompa de lana para Mujer" class="product-thumb"></td>
+                        <td>Chompa de lana para Mujer</td>
+                        <td>35.00</td>
+                        <td><input type="number" class="product-quantity" min="0" value="0" data-id="P003"></td>
+                    </tr>
+                    <tr data-product-id="P004" data-product-price="10.00">
+                        <td>P004</td>
+                        <td class="product-image-cell"><img src="./assets/images/camisa3.jpg" alt="Camisa negra para Mujer" class="product-thumb"></td>
+                        <td>Camisa negra para Mujer</td>
+                        <td>10.00</td>
+                        <td><input type="number" class="product-quantity" min="0" value="0" data-id="P004"></td>
+                    </tr>
+                    <tr data-product-id="P005" data-product-price="18.00">
+                        <td>P005</td>
+                        <td class="product-image-cell"><img src="./assets/images/camisahombre3.webp" alt="Camisa negra para Hombre" class="product-thumb"></td>
+                        <td>Camisa negra para Hombre</td>
+                        <td>18.00</td>
+                        <td><input type="number" class="product-quantity" min="0" value="0" data-id="P005"></td>
+                    </tr>
+                    <tr data-product-id="P006" data-product-price="30.00">
+                        <td>P006</td>
+                        <td class="product-image-cell"><img src="./assets/images/chompa3.jpg" alt="Chompa corta blanca Mujer" class="product-thumb"></td>
+                        <td>Chompa corta blanca Mujer</td>
+                        <td>30.00</td>
+                        <td><input type="number" class="product-quantity" min="0" value="0" data-id="P006"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="calcularTotalBtn" class="action-btn">Calcular Precio Total</button>
+            <h2 id="resultadoTotal" class="result-display">Precio Total: S/ 0.00</h2>
+        </section>
+
+        <section id="formulario-calculos" class="content-section">
+            <h2>Formulario de Datos y Cálculos Adicionales</h2>
+
+            <div class="form-group-section">
+                <h3>Inputs de Texto</h3>
+                <div class="input-group">
+                    <label for="inputText1">ID del Producto 1:</label>
+                    <input type="text" id="inputText1" name="productIdentifier" class="product-identifier-input">
+                </div>
+                <div class="input-group">
+                    <label for="inputText2">ID del Producto 2:</label>
+                    <input type="text" id="inputText2" name="productIdentifier" class="product-identifier-input">
+                </div>
+                <div class="input-group">
+                    <label for="inputText3">ID del Producto 3:</label>
+                    <input type="text" id="inputText3" name="productIdentifier" class="product-identifier-input">
+                </div>
+                <button id="concatenarIdsBtn" class="action-btn">Concatenar IDs</button>
+                <h2 id="resultadoIdsConcatenados" class="result-display">IDs Concatenados:</h2>
+                <button id="contarInputsBtn" class="action-btn">Contar Inputs de Texto</button>
+                <h2 id="resultadoConteoInputs" class="result-display">Número de Inputs Text:</h2>
+            </div>
+            
+            <div class="form-group-section">
+                <h3>Comentarios / Detalles</h3>
+                <div class="input-group">
+                    <label for="textAreaInput">Comentarios adicionales:</label>
+                    <textarea id="textAreaInput" rows="5"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="cantidadProductosInput">Cantidad Total (para Descuento/Recargo):</label>
+                    <input type="number" id="cantidadProductosInput" min="0" value="0">
+                </div>
+                <button id="aplicarDescuentoRecargoBtn" class="action-btn">Aplicar Descuento/Recargo</button>
+                <h2 id="resultadoDescuentoRecargo" class="result-display">Resultado Descuento/Recargo:</h2>
+            </div>
+
+            <div class="form-group-section">
+                <h3>Opciones Múltiples</h3>
+                <div class="options-group">
+                    <h4>Servicios Extra (Checkbox):</h4>
+                    <div class="checkbox-line">
+                        <input type="checkbox" id="checkbox1" name="servicioExtra" class="extra-service">
+                        <label for="checkbox1">Envoltura de regalo</label>
+                        <input type="checkbox" id="checkbox2" name="servicioExtra" class="extra-service">
+                        <label for="checkbox2">Envío urgente</label>
+                        <input type="checkbox" id="checkbox3" name="servicioExtra" class="extra-service">
+                        <label for="checkbox3">Tarjeta personalizada</label>
+                    </div>
+                </div>
+                <div class="options-group">
+                    <h4>Método de Pago (Radio Buttons):</h4>
+                    <div class="radio-line">
+                        <input type="radio" id="radio1" name="metodoPago" class="payment-method" value="tarjeta">
+                        <label for="radio1">Tarjeta de Crédito</label>
+                        <input type="radio" id="radio2" name="metodoPago" class="payment-method" value="paypal">
+                        <label for="radio2">PayPal</label>
+                        <input type="radio" id="radio3" name="metodoPago" class="payment-method" value="transferencia">
+                        <label for="radio3">Transferencia Bancaria</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group-section" id="actividad-domiciliaria">
+                <h3>Actividad Domiciliaria: Creación Dinamica de Inputs</h3>
+                <div class="input-group">
+                    <label for="palabraInput">Ingrese una palabra:</label>
+                    <input type="text" id="palabraInput">
+                </div>
+                <div id="dynamicInputsContainer" class="dynamic-inputs-container">
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#top" class="btn-volver"><i class="fas fa-arrow-up"></i> Volver inicio</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2025 Clothing Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
