@@ -202,7 +202,7 @@
                 
                 <div>
                     <img class="class_float_rigth2"
-                    style="border: 9px; double ; color: mediumvioletred;"
+                    style="border: 9px double blue"
                     src="granoscafe1.jpg" alt="granos de cafe"
                     width="300px" height="400px">
                     <p style="font-size: 20px;">
@@ -302,6 +302,130 @@
                <div id="complementario1">Datos complementarios del estudiante:
                </div>
  
+               <h2> USO DE FOR clasico y condicionales en una class </h2>
+
+            <p class="classFOR1" style="font-size:25px ;">Texto 1 de classFOR1 [0]</p> 
+            <p class="classFOR1" style="font-size:25px ;">Texto 2 de classFOR1[1]</p>
+            <h2 class="classFOR1" style="font-size:25px ;">Texto 3 de classFOR1[2]</h2>
+            <h3 class="classFOR1" style="font-size:25px ;">Texto 4 de classFOR1[3]</h3>
+
+                <button style="font-size:25px ;" onclick="FUsoFor1()">
+                Reporte de classFOR1</button>
+                <button style="font-size:25px ;" onclick="FUsoForEach1()">
+                    Reporte de classFOR1 con FOREACH</button>
+
+                <button style="font-size:25px ;" onclick="FEliminarConcat()">
+                    Eliminar concatenacion</button>
+                    
+            </article>
+
+            <article>
+                <h2>USO DE JAVASCRIPT EN FORMULARIOS</h2>
+
+                <form action="todosobremipersona.html" method="post" target="_blank">
+                    <!--tarjet= "blanck" me permite abrir el enlace en otra pagina web.-->
+                    <p> <label for="NOMBRE">Nombre: <input type="text" id="NOMBRE" name="nombre" class="datospersonales" required autofocus>   </label> </p>
+                    <p> <label for="APELLIDO">Apellido: <input type="text" id="APELLIDO" name="apellido" class="datospersonales" >   </label> </p>
+                    <p> <label for="EDAD">Edad: <input type="number" id="EDAD" name="edad" min="18" max="80" class="datospersonales" >   </label> </p>
+                    
+                    <p> <label for="observacion"> Observacion <br>
+                             <textarea name="observacion" id="observacion" 
+                             style="height: 180px; width: 300px;font-size: 25px;">
+                              
+                             </textarea>
+                    
+                    
+                         </label> 
+                    </p>
+                    
+                    
+                    <p>
+                        <label for="estatura">Estatura
+                          <select name="grupoestatura" id="estatura">
+                            <option value="seleccione">Seleccione</option>
+                            <option value="menor de 1.50m">menor de 1.50m</option>
+                            <option value="de 1.50m a 1.59m">de 1.50m a 1.59m</option>
+                            <option value="de 1.60m a 1.69m">de 1.60m a 1.69m</option>
+                            <option value="mayor o igual a 1.70m">mayor o igual a 1.70m</option>
+                          </select>
+                        </label>  
+                    
+                    </p>
+                    
+                    <p> <label>Cursos llevados</label>
+                      <br>
+                         <input type="checkbox" name="cursos" value="matematica" id="matematica">
+                           <label for="matematica">Matematica</label> <br>
+                         <input type="checkbox" name="cursos" value="">  
+                           <label for="matematica">Comunicación</label> <br>
+                         <input type="checkbox" name="cursos" value=""> 
+                           <label for="matematica">Financiamiento</label> <br> 
+                         <input type="checkbox" name="cursos" value="">  
+                           <label for="matematica">Marketing</label> <br>
+                    
+                    </p>
+                    
+                    <br> 
+                    
+                    <p><label>Ciclo actual</label></p>
+                    <input style="scale: 1.5;" id="primero" type="radio" name="ciclo" value="primero">
+                    <label for="primero">Primero</label> <br>
+                    <input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+                    <label for="segundo">Segundo</label> <br>
+                    <input style="scale: 1.5;" id="tercero" type="radio" name="ciclo" value="tercero">
+                    <label for="tercero">Tercero</label> <br>
+                    <input style="scale: 1.5;" id="cuarto" type="radio" name="ciclo" value="cuarto">
+                    <label for="cuarto">Cuarto</label> <br>
+                    <input style="scale: 1.5;" id="quinto" type="radio" name="ciclo" value="quinto">
+                    <label for="primero">Primero</label> <br>
+                    <input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+                    <label for="segundo">Segundo</label> <br>
+                    
+                    <br>
+                    
+                    <label for="fecha">SELECCIONE FECHA: <br>
+                       <input style="font-size: 25px;" type="date" name="fecha" id="fecha"
+                       min="2025-09-01" max="2025-12-31">
+                    </label>
+                     <br> <br>
+                    
+                     <label for="clave">Contraseña: <br>
+                       <input type="password" id="clave" name="clave" minlength="8" maxlength="12"
+                       placeholder=""> 
+                    
+                     </label>
+                    
+                     <br><br>
+                    
+                      <label for="correo">Correo electronico: <br>
+                       <input type="email" id="correo" name="correo" placeholder="@certus.edu.pe" required 
+                       pattern="[a-zA-Z0-9]+@certus\.edu\.pe"> 
+                     </label>
+                    
+                     <br><br>
+                    
+                     <label for="usuario">Nombre de usuario: <br>
+                      <input type="text" id="usuario" name="usuario" required 
+                      minlength="5" y maxlength="20" 
+                      pattern="[AZa-z0-9]+" >
+                     </label>
+                    
+                      <br><br>
+                    
+                      <label for="resetear">limpiar: <br>
+                       <input type="reset" id="resetear" name="resetear"> 
+                     </label>
+                    <!--hola-->
+
+                     <br> <br>
+
+                     <button style="font-size:25px ;" onclick="FCapturarNombre()">
+                        copiar datos a observaciones</button>
+
+                     <br><br>
+                    
+                    <button style="font-size: 25px;" type="button"> ENVIAR </button>
+                    </form>
             </article>
         </section>
 
