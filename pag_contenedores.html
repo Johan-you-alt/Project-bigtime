@@ -3,190 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIENDA VIRTUAL CAFETETERIA</title>
+    <title>TIENDA VIRTUAL CAFETERÍA</title>
     <link rel="stylesheet" type="text/css" href="Estilos2.css"/>
-    <script type="text/javascript" src="script1.js" ></script> <!--vincular html con javascript-->
-</head>
+    </head>
 
 <body>
-   
+    
     <div class="contenedor">
         <header>
             <h1>CROISSANT & COFFEE</h1>
-            <p>header</p>
             <p>Bienvenido a mi sitio web de ejemplo.</p>
         </header>
 
-
-        <nav> <!--Enaces internos-->
+        <nav>
             <a href="#">INICIO</a>
             <a href="#">PRODUCTOS</a>
             <a href="#">FORMULARIOS</a>
             <a href="#">Contacto</a>
-           
+            
             <ul class="claseNav">
                 <li> <a href="https://www.grupolonato.com/">GRUPO LONATO</a>
-                    <ul><!--INICIO DE SUBMENU-->
+                    <ul>
                         <li><a href="https://www.croissantycaffe.pe/">Croissant & Caffe</a></li>
                         <li><a href="https://www.lacaffetteria.pe/">La Cafeteria DI Lonato</a></li>
                     </ul>
                 </li>
 
                 <li> <a href="https://www.cafeteria.panatelier.com.pe/">CAFETERIA ARTESANAL</a>
-                    <ul><!--INICIO DE SUBMENU-->
+                    <ul>
                         <li><a href="https://www.cafeteria.panatelier.com.pe/#dulces">DULCES</a></li>
                         <li><a href="https://www.cafeteria.panatelier.com.pe/#saladitos">SALADITOS</a></li>
                     </ul>
                 </li>
             </ul>
-
         </nav>
 
-
         <main>
-            
-            <section style="background-image:url('croisantp.jpg');
-            background-repeat: no-repeat ; background-position:50px ;
-            background-attachment: fixed; background-size: 800px; "
-        >
+            <section class="seccion-principal"> 
                 <article>
                     <h2>PANES CON MASAMADRE</h2>
-                    <p>el pan de masa madre puede considerarse más saludable que otros panes debido a que el proceso de fermentación mejora la digestibilidad,
+                    <p>El pan de masa madre puede considerarse más saludable que otros panes debido a que el proceso de fermentación mejora la digestibilidad,
                          aumenta la disponibilidad de nutrientes como minerales y folato, tiene un bajo índice glucémico, contiene probióticos para la salud intestinal y su acidez inhibe el crecimiento de moho.</p>
-                         <p>CATALOGO:</p>
+                    <p>CATÁLOGO:</p>
                 </article>
                 <article>
                     <h2>CAFÉS</h2>
-                    <p>Mejora la memoria y concentración, previene la depresión,Aumenta la energía y reduce la fatiga,
-                        rico en antioxidantes y Mantiene la juventud, estos beneficios hacen del café una bebida popular y 
+                    <p>Mejora la memoria y concentración, previene la depresión, aumenta la energía y reduce la fatiga,
+                         rico en antioxidantes y mantiene la juventud. Estos beneficios hacen del café una bebida popular y 
                          valiosa para la salud, siempre que se consuma en cantidades moderadas y sin azúcar ni aditivos.</p>
-                         <p>CATALOGO:</p>
-                    <p>ESSPRESO</p>
-                    <img class="marget_imagens" src="" alt="">
+                    <p>CATÁLOGO:</p>
+                    <p>ESPRESSO</p>
+                    <img class="marget_imagens" src="" alt="Imagen de café">
                 </article>
             </section>
 
-            <div>
-             <aside  >
-                 <h3>ENLACES EXTERNOS</h3>
-                 <p><a class="color_link" href="https://www.rayvi-cafe.com/" target="_blank">Nuestro abastecedor de café</a></p>
-                 <p><a href="https://www.instagram.com/croissantycaffe/" target="_blank">Nuestro Instagram</a></p>
-             </aside>
-              
-             <aside class="aside_imagenes">
-                <h3 class="primera_letra">Fotos</h3>
-                 <img src="granoscafe1.jpg" alt="">
-                 <img src="" alt="">
-             </aside>
+            <div class="main-complementario">
+                <aside>
+                    <h3>ENLACES EXTERNOS</h3>
+                    <p><a class="color_link" href="https://www.rayvi-cafe.com/" target="_blank">Nuestro abastecedor de café</a></p>
+                    <p><a href="https://www.instagram.com/croissantycaffe/" target="_blank">Nuestro Instagram</a></p>
+                </aside>
+                
+                <aside class="aside_imagenes">
+                    <h3 class="primera_letra">Fotos</h3>
+                    <img src="granoscafe1.jpg" alt="Granos de café">
+                    <img src="" alt="Espacio para imagen">
+                </aside>
             </div>
         </main>
 
         <section>
             <article>
                 <h2>POSICIONAMIENTO STATIC (CON MARGIN-TOP) </h2>
-                <div style="display: inline-block;">
+                <div class="pos-contenedor-inline">
                     <p class="clase_static">1er texto, con STATIC</p>
                 </div>
-
-                <div style="display: inline-block;">
-                    <p>2do texto, sin STATIC en la misma linea</p>
+                <div class="pos-contenedor-inline">
+                    <p>2do texto, sin STATIC en la misma línea</p>
                 </div>
-
 
                 <h2>POSICIONAMIENTO STATIC 2(SIN MARGIN-TOP)</h2>
-                <div style="display: inline-block;">
+                <div class="pos-contenedor-inline">
                     <p class="clase_static2">1er texto, con STATIC</p>
                 </div>
-
-                <div style="display: inline-block;">
-                    <p style="background-color: orange;">2do texto, sin STATIC en la misma linea</p>
+                <div class="pos-contenedor-inline">
+                    <p style="background-color: orange;">2do texto, sin STATIC en la misma línea</p>
                 </div>
             </article>
 
             <article>
                 <p>POSICIONAMIENTO RELATIVE </p>
-                <div style="display: inline-block;">
+                <div class="pos-contenedor-inline">
                     <p class="clase_relative">Al usar position relative en la pseudoclase Hover, position se activa
-                                              cuando se posiciona el mouse en la imagen. Notese que como se ha utilizado top y left,
-                                              esto causa la superposición de elementos </p>
+                        cuando se posiciona el mouse en la imagen. Nótese que como se ha utilizado top y left,
+                        esto causa la superposición de elementos.</p>
                     <img class="clase_relative"
                     style="border: 9px dotted; color: red;"
                     src="soquer.png" alt="imagen no encontrada"
                     width="400" height="341">
                 </div>
-                <div style="display: inline-block;">
-                    <p>2do v1.1 texto en misma linea</p>
+                <div class="pos-contenedor-inline">
+                    <p>2do v1.1 texto en misma línea</p>
                 </div>
 
                 <p>POSICIONAMIENTO RELATIVE</p>
-                <div style="display: inline-block;">
+                <div class="pos-contenedor-inline">
                     <p class="clase_relative2">Al usar position relative en la pseudoclase Hover, position se activa cuando se posiciona el mouse en la imagen.
-                                              Notese que como se ha utilizado Margin-top y Margin-left, esto causa la NO superposición de elementos , es
-                                              decir se acomoda la posición para no generar cruces.</p>
+                        Nótese que como se ha utilizado Margin-top y Margin-left, esto causa la NO superposición de elementos, es
+                        decir se acomoda la posición para no generar cruces.</p>
                     <img class="clase_relative2"
                     style="border: 9px dotted; color: rgb(0, 255, 21);"
                     src="soquer.png" alt="imagen no encontrada"
                     width="400" height="341">
                 </div>
-                <div style="display: inline-block;">
-                    <p>2do v1.2 texto en misma linea</p>
+                <div class="pos-contenedor-inline">
+                    <p>2do v1.2 texto en misma línea</p>
                 </div>
 
-                    <p>POSICIONAMIENTO RELATIVE</p>
-                <div style="display: inline-block;">
-                    <p class="clase_relative3">Según el resultado de position relative hubi una superposición de la imagen a los textos.
-                                               Si queremos que la superposicion quede al revés, es decir, que el texto este encima de la imagen.
-                                               Utilizar la propiedad z-index.</p>
+                <p>POSICIONAMIENTO RELATIVE</p>
+                <div class="pos-contenedor-inline">
+                    <p class="clase_relative3">Según el resultado de position relative hubo una superposición de la imagen a los textos.
+                        Si queremos que la superposición quede al revés, es decir, que el texto esté encima de la imagen,
+                        utilizar la propiedad z-index.</p>
                     <img class="clase_relative3"
                     style="border: 9px dotted; color: rgb(0, 174, 255);"
                     src="soquer.png" alt="imagen no encontrada"
                     width="400" height="341">
                 </div>
-                <div style="display: inline-block;">
-                    <p>2do v1.3 texto en misma linea</p>
+                <div class="pos-contenedor-inline">
+                    <p>2do v1.3 texto en misma línea</p>
                 </div>
                 
-                <h2>POSICIONAMIENTO ABSOLUTO RESPECTO A LA PAGINA PRINCIPAL</h2>
-                <div style="display: inline-block;">
+                <h2>POSICIONAMIENTO ABSOLUTO RESPECTO A LA PÁGINA PRINCIPAL</h2>
+                <div class="pos-contenedor-inline">
                     <img class="clase_Absolute" 
                     style="border: 9px double;color: rgb(163, 111, 14);"
-                    src="imagenes2/croisantmasa.webp" alt="imagen no encontrada"
+                    src="imagenes2/croisantmasa.webp" alt="Imagen de croissant"
                     width="400px" height="341px">
                 </div>
-                <div style="display: inline-block;">
-                    <p>2do v1.4 texto position absolute en la misma linea</p>
+                <div class="pos-contenedor-inline">
+                    <p>2do v1.4 texto position absolute en la misma línea</p>
                 </div>
 
                 <h2>POSICIONAMIENTO ABSOLUTE RESPECTO A RELATIVE </h2>
-                <DIV style="display: inline-block;" class="clase_relative4">
+                <div class="pos-contenedor-inline clase_relative4">
                     <p>la imagen es absolute respecto al DIV relative</p>
                     <img class="clase_AbsoluteRelative"
-                       style="border: 9px dotted;color: blueviolet;"
-                       src="soquer.png" alt="imagen no encontrada"
-                       width="400px" height="341px">
-                </DIV>
-                <DIV style="display: inline-block;">
-                    <h2>2do texto position adsolute relative en misma linea</h2>
-                </DIV>
+                        style="border: 9px dotted;color: blueviolet;"
+                        src="soquer.png" alt="imagen no encontrada"
+                        width="400px" height="341px">
+                </div>
+                <div class="pos-contenedor-inline">
+                    <h2>2do texto position absolute relative en misma línea</h2>
+                </div>
 
                 <h2>POSICIONAMIENTO FIXED</h2>
-                <div><!--si colocas a div style="height se restringira su altura-->
-                    <img class="clase_Fixed ; marcaagua" 
-                       style="border: 9px solid;color: rgb(102, 133, 153);"
-                       src="soquer.png" alt="imagen no encontrada"
-                       width="400px" height="341px">
+                <div>
+                    <img class="clase_Fixed marcaagua" 
+                        style="border: 9px solid;color: rgb(102, 133, 153);"
+                        src="soquer.png" alt="imagen no encontrada"
+                        width="400px" height="341px">
                 </div>
 
                 <h2>POSICIONAMIENTO STICKY</h2>
                 <div>
                     <img class="clase_sticky" 
-                       style="border: 9px double;color: rgb(18, 130, 204);"
-                       src="soquer.png" alt="imagen no encontrada"
-                       width="300px" height="400px">
-                    <p style="font-size: 20px;">TEXTO PARA STICKY,IMPORTANTE:
-                                             El contenedor es el div, que abarcar el tamaño según el height. <br>
-                                             La imagen es position sticky, que se
-                                             mantendrá fijo hasta las dimensiones del div<br>
+                        style="border: 9px double;color: rgb(18, 130, 204);"
+                        src="soquer.png" alt="imagen no encontrada"
+                        width="300px" height="400px">
+                    <p style="font-size: 20px;">TEXTO PARA STICKY, IMPORTANTE:
+                        El contenedor es el div, que abarca el tamaño según el height. <br>
+                        La imagen es position sticky, que se mantendrá fijo hasta las dimensiones del div.<br>
+                    </p>
                 </div>
 
                 <p class="texto_1"> <br>
@@ -197,7 +185,7 @@
 
                     La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los
                     elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la
-                    página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).      
+                    página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto).      
                 </p>
                 
                 <div>
@@ -219,7 +207,6 @@
             </article>
 
             <article>
-
                 <h2>Uso de la Visualización Display</h2>
                 <div class="tiponone">Elemento de estilo none</div>
                 
@@ -228,16 +215,13 @@
                 <div class="tipoinlineblock">Elemento 3 de inline-block</div>
 
                 <h2>Elemento oculto mediante visibility hidden</h2>
-
                 <div class="tipohidden">Elemento 3 de estilo hidden</div>
 
-                <h2>Uso de Display Grip</h2>
-                <h2>signficado de escudos</h2>
+                <h2>Uso de Display Grid</h2>
+                <h2>Significado de escudos</h2>
                 <div class="contenedor-grid">
-                    <div class="item"> <img src="" alt="" height="200" width="200"> </div>
-
-                    <div class="item">  <img src="" alt="" height="200" width="200"></div>
-
+                    <div class="item"> <img src="" alt="Escudo" height="200" width="200"> </div>
+                    <div class="item"> <img src="" alt="Escudo" height="200" width="200"></div>
                     <div class="item">ESCUDO 1 </div>
                     <div class="item">ESCUDO 2</div>
                     <div class="item">Legio de reconocimiento</div>
@@ -246,76 +230,49 @@
 
                 <video autoplay muted loop id="Mivideo">
                     <source src="videodefondo.webm" type="video/webm">
-                    tu navegador no soporta videos HTML5.
+                    Tu navegador no soporta videos HTML5.
                 </video>
             </article>
             
         </section>
 
         <section>
-            <article> <h2>JAVASCRIPT MODO INTERNAL</h2>
+            <article> 
+                <h2>JAVASCRIPT MODO INTERNAL</h2>
                 <div style="font-size: 30px;">
                     Contenedor resultado
-                
                     <div id="resultado" style="font-size: 30px;">
-                     <p> Operación suma </p>
-
+                        <p> Operación suma </p>
                     </div>
-               </div>
-               <script>
-                window.alert("Bienvenidos")
-                var valor1 = 40;  var valor2 = 60;
-                var suma = valor1 + valor2;  var resta = valor1 - valor2;
-                document.write("<br><br><br> FIN DE PAGINA");
+                </div>
+                
+                <h1 style="font-size: 30px;">EJEMPLO DE MANIPULACIÓN DEL DOM </h1>
+                <p id="ejmDOM1" style="font-size: 25px;">Este es el primer texto a aplicar DOM</p>
 
-                console.log("El valor de la suma de ",valor1," con ",valor2,"es :",suma);
-                console.log("El valor de la resta de ",valor1," con ",valor2,"es :",resta);
-                document.getElementById('resultado').innerHTML="<br>El valor de la suma de "+valor1+" con "+valor2+" es :"+suma+ "<br>" + "El valor de la resta de "+valor1+" con "+valor2+" es :"+resta;
+                <p class="classDOM1" style="font-size: 25px;">Texto1 a aplicar DOM mediante clase</p>
+                <p class="classDOM1" style="font-size: 25px;">Texto2 a aplicar DOM mediante clase</p>
+                <h2 class="classDOM1" style="font-size: 25px;">Texto a aplicar DOM mediante TAG</h2>
 
-                document.write("  <ul align='right'  style='color:rgb(47, 59, 34)'> " + 
-                " <li>Capacidad de atencion</li> " +
-                    " <li>Consultar dudas no resueltas</li> " +
-                    " <li>Repasar temas y realizar tareas en casa</li>" +
-                " </ul> ") ;
+                <button style="font-size: 25px;" onclick="FCambioColor()">CAMBIAR COLOR POR ID</button>
+                <button style="font-size: 25px;" onclick="FCambioClase1()">CAMBIAR POR CLASE </button>
+                <button style="font-size: 25px;" onclick="FCambioTag1()">CAMBIAR POR TAG H2</button>
+                <button style="font-size: 25px;" onclick="FCrear1()">Crear lista viñetas</button>
+                <button style="font-size: 25px;" onclick="FAgregarTextoPermanete()">Agregar texto permanente</button>
+                
+                <h2 style="font-size: 30px;">Creación de elementos en línea</h2> <br>
+                <button onclick="FCrearElemento()">Crear elemento</button>
+                <div id="complementario1">Datos complementarios del estudiante:</div>
+    
+                <h2> USO DE FOR clásico y condicionales en una class </h2>
 
-               </script>
-               
-               <!--MANIPULACION DEL DOM-->
-               <h1 style="font-size: 30px;">EJEMPLO DE MANIPULACION DEL DOM </h1>
-               <p id="ejmDOM1" style="font-size: 25px;">Este es el primer texto a aplicar DOM</p>
+                <p class="classFOR1" style="font-size:25px ;">Texto 1 de classFOR1 [0]</p> 
+                <p class="classFOR1" style="font-size:25px ;">Texto 2 de classFOR1[1]</p>
+                <h2 class="classFOR1" style="font-size:25px ;">Texto 3 de classFOR1[2]</h2>
+                <h3 class="classFOR1" style="font-size:25px ;">Texto 4 de classFOR1[3]</h3>
 
-               <p class="classDOM1" style="font-size: 25px;">Texto1 a aplicar DOM mediante clase</p>
-
-               <p class="classDOM1" style="font-size: 25px;">Texto2 a aplicar DOM mediante clase</p>
-
-               <h2 class="classDOM1" style="font-size: 25px;">Texto a aplicar DOM mediante TAG</h2>
-
-               <button style="font-size: 25px;"onclick="FCambioColor()">CAMBIAR COLOR POR ID</button>
-
-               <button style="font-size: 25px;"onclick="FCambioClase1()">CAMBIAR POR CLASE </button>
-               <button style="font-size: 25px;"onclick="FCambioTag1()">CAMBIAR POR TAG H2</button>
-               <button style="font-size: 25px;"onclick="FCrear1()">Crear lista viñetas</button>
-               <button style="font-size: 25px;"onclick="FAgregarTextoPermanete()">Crear lista viñetas</button>
-               
-               <h2  style="font-size: 30px;">Creacion de elementos en linea  ></h2> <br>
-               <button onclick="FCrearElemento()">Crear elemento</button>
-               <div id="complementario1">Datos complementarios del estudiante:
-               </div>
- 
-               <h2> USO DE FOR clasico y condicionales en una class </h2>
-
-            <p class="classFOR1" style="font-size:25px ;">Texto 1 de classFOR1 [0]</p> 
-            <p class="classFOR1" style="font-size:25px ;">Texto 2 de classFOR1[1]</p>
-            <h2 class="classFOR1" style="font-size:25px ;">Texto 3 de classFOR1[2]</h2>
-            <h3 class="classFOR1" style="font-size:25px ;">Texto 4 de classFOR1[3]</h3>
-
-                <button style="font-size:25px ;" onclick="FUsoFor1()">
-                Reporte de classFOR1</button>
-                <button style="font-size:25px ;" onclick="FUsoForEach1()">
-                    Reporte de classFOR1 con FOREACH</button>
-
-                <button style="font-size:25px ;" onclick="FEliminarConcat()">
-                    Eliminar concatenacion</button>
+                <button style="font-size:25px ;" onclick="FUsoFor1()">Reporte de classFOR1</button>
+                <button style="font-size:25px ;" onclick="FUsoForEach1()">Reporte de classFOR1 con FOREACH</button>
+                <button style="font-size:25px ;" onclick="FEliminarConcat()">Eliminar elemento</button>
                     
             </article>
 
@@ -323,126 +280,145 @@
                 <h2>USO DE JAVASCRIPT EN FORMULARIOS</h2>
 
                 <form action="todosobremipersona.html" method="post" target="_blank">
-                    <!--tarjet= "blanck" me permite abrir el enlace en otra pagina web.-->
-                    <p> <label for="NOMBRE">Nombre: <input type="text" id="NOMBRE" name="nombre" class="datospersonales" required autofocus>   </label> </p>
-                    <p> <label for="APELLIDO">Apellido: <input type="text" id="APELLIDO" name="apellido" class="datospersonales" >   </label> </p>
-                    <p> <label for="EDAD">Edad: <input type="number" id="EDAD" name="edad" min="18" max="80" class="datospersonales" >   </label> </p>
+                    <p> <label for="NOMBRE">Nombre: <input type="text" id="NOMBRE" name="nombre" class="datospersonales" required autofocus> </label> </p>
+                    <p> <label for="APELLIDO">Apellido: <input type="text" id="APELLIDO" name="apellido" class="datospersonales" > </label> </p>
+                    <p> <label for="EDAD">Edad: <input type="number" id="EDAD" name="edad" min="18" max="80" class="datospersonales" > </label> </p>
                     
-                    <p> <label for="observacion"> Observacion <br>
-                             <textarea name="observacion" id="observacion" 
-                             style="height: 180px; width: 300px;font-size: 25px;">
-                              
-                             </textarea>
-                    
-                    
-                         </label> 
+                    <p>
+                        <label for="num_colegios">Número Colegios que estudió:</label>
+                        <input type="number" id="num_colegios" name="num_colegios_count" min="0" value="0">
                     </p>
-                    
+
+                    <br>
+
+                    <div id="detalle_colegios_container">
+                    </div>
+
+                    <br>
+
+                    <p> <label for="observacion"> Observación <br>
+                        <textarea name="observacion" id="observacion" 
+                        style="height: 180px; width: 300px;font-size: 25px;"></textarea>
+                    </label> </p>
                     
                     <p>
                         <label for="estatura">Estatura
-                          <select name="grupoestatura" id="estatura">
-                            <option value="seleccione">Seleccione</option>
-                            <option value="menor de 1.50m">menor de 1.50m</option>
-                            <option value="de 1.50m a 1.59m">de 1.50m a 1.59m</option>
-                            <option value="de 1.60m a 1.69m">de 1.60m a 1.69m</option>
-                            <option value="mayor o igual a 1.70m">mayor o igual a 1.70m</option>
-                          </select>
-                        </label>  
-                    
+                            <select name="grupoestatura" id="estatura">
+                                <option value="seleccione">Seleccione</option>
+                                <option value="menor de 1.50m">menor de 1.50m</option>
+                                <option value="de 1.50m a 1.59m">de 1.50m a 1.59m</option>
+                                <option value="de 1.60m a 1.69m">de 1.60m a 1.69m</option>
+                                <option value="mayor o igual a 1.70m">mayor o igual a 1.70m</option>
+                            </select>
+                        </label> 
                     </p>
                     
                     <p> <label>Cursos llevados</label>
-                      <br>
-                         <input type="checkbox" name="cursos" value="matematica" id="matematica">
-                           <label for="matematica">Matematica</label> <br>
-                         <input type="checkbox" name="cursos" value="">  
-                           <label for="matematica">Comunicación</label> <br>
-                         <input type="checkbox" name="cursos" value=""> 
-                           <label for="matematica">Financiamiento</label> <br> 
-                         <input type="checkbox" name="cursos" value="">  
-                           <label for="matematica">Marketing</label> <br>
-                    
+                        <br>
+                        <input type="checkbox" name="cursos" value="matematica" id="matematica"> <label for="matematica">Matemática</label> <br>
+                        <input type="checkbox" name="cursos" value="comunicacion" id="comunicacion"> <label for="comunicacion">Comunicación</label> <br>
+                        <input type="checkbox" name="cursos" value="financiamiento" id="financiamiento"> <label for="financiamiento">Financiamiento</label> <br> 
+                        <input type="checkbox" name="cursos" value="marketing" id="marketing"> <label for="marketing">Marketing</label> <br>
                     </p>
                     
                     <br> 
                     
                     <p><label>Ciclo actual</label></p>
-                    <input style="scale: 1.5;" id="primero" type="radio" name="ciclo" value="primero">
-                    <label for="primero">Primero</label> <br>
-                    <input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
-                    <label for="segundo">Segundo</label> <br>
-                    <input style="scale: 1.5;" id="tercero" type="radio" name="ciclo" value="tercero">
-                    <label for="tercero">Tercero</label> <br>
-                    <input style="scale: 1.5;" id="cuarto" type="radio" name="ciclo" value="cuarto">
-                    <label for="cuarto">Cuarto</label> <br>
-                    <input style="scale: 1.5;" id="quinto" type="radio" name="ciclo" value="quinto">
-                    <label for="primero">Primero</label> <br>
-                    <input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
-                    <label for="segundo">Segundo</label> <br>
+                    <input style="scale: 1.5;" id="ciclo_primero" type="radio" name="ciclo" value="primero"> <label for="ciclo_primero">Primero</label> <br>
+                    <input style="scale: 1.5;" id="ciclo_segundo" type="radio" name="ciclo" value="segundo"> <label for="ciclo_segundo">Segundo</label> <br>
+                    <input style="scale: 1.5;" id="ciclo_tercero" type="radio" name="ciclo" value="tercero"> <label for="ciclo_tercero">Tercero</label> <br>
+                    <input style="scale: 1.5;" id="ciclo_cuarto" type="radio" name="ciclo" value="cuarto"> <label for="ciclo_cuarto">Cuarto</label> <br>
+                    <input style="scale: 1.5;" id="ciclo_quinto" type="radio" name="ciclo" value="quinto"> <label for="ciclo_quinto">Quinto</label> <br>
+                    <input style="scale: 1.5;" id="ciclo_sexto" type="radio" name="ciclo" value="sexto"> <label for="ciclo_sexto">Sexto</label> <br>
                     
                     <br>
                     
                     <label for="fecha">SELECCIONE FECHA: <br>
-                       <input style="font-size: 25px;" type="date" name="fecha" id="fecha"
-                       min="2025-09-01" max="2025-12-31">
+                        <input style="font-size: 25px;" type="date" name="fecha" id="fecha"
+                        min="2025-09-01" max="2025-12-31">
                     </label>
-                     <br> <br>
+                    <br> <br>
                     
-                     <label for="clave">Contraseña: <br>
-                       <input type="password" id="clave" name="clave" minlength="8" maxlength="12"
-                       placeholder=""> 
+                    <label for="clave">Contraseña: <br>
+                        <input type="password" id="clave" name="clave" minlength="8" maxlength="12" placeholder=""> 
+                    </label>
                     
-                     </label>
+                    <br><br>
                     
-                     <br><br>
+                    <label for="correo">Correo electrónico: <br>
+                        <input type="email" id="correo" name="correo" placeholder="@certus.edu.pe" required 
+                        pattern="[a-zA-Z0-9]+@certus\.edu\.pe"> 
+                    </label>
                     
-                      <label for="correo">Correo electronico: <br>
-                       <input type="email" id="correo" name="correo" placeholder="@certus.edu.pe" required 
-                       pattern="[a-zA-Z0-9]+@certus\.edu\.pe"> 
-                     </label>
+                    <br><br>
                     
-                     <br><br>
+                    <label for="usuario">Nombre de usuario: <br>
+                     <input type="text" id="usuario" name="usuario" required 
+                     minlength="5" maxlength="20" 
+                     pattern="[A-Za-z0-9]+" >
+                    </label>
                     
-                     <label for="usuario">Nombre de usuario: <br>
-                      <input type="text" id="usuario" name="usuario" required 
-                      minlength="5" y maxlength="20" 
-                      pattern="[AZa-z0-9]+" >
-                     </label>
+                    <br><br>
                     
-                      <br><br>
-                    
-                      <label for="resetear">limpiar: <br>
-                       <input type="reset" id="resetear" name="resetear"> 
-                     </label>
-                    <!--hola-->
+                    <label for="resetear">Limpiar: <br>
+                        <input type="reset" id="resetear" name="resetear"> 
+                    </label>
 
-                     <br> <br>
+                    <br> <br>
 
-                     <button style="font-size:25px ;" onclick="FCapturarNombre()">
-                        copiar datos a observaciones</button>
-
-                     <br><br>
+                    <button style="font-size:25px ;" type="button" onclick="FCapturarNombre()">
+                        Copiar Nombres a Observaciones</button>
+                    <br> <br>
+                    <button style="font-size:25px ;" type="button" onclick="FValidarCiclo()">
+                        Enviar ciclo a observaciones</button>
+                        
+                    <button style="font-size:25px ;" type="button" onclick="FValidarCursos()">
+                        Enviar curso a observaciones </button>
+                    <br><br>
                     
-                    <button style="font-size: 25px;" type="button"> ENVIAR </button>
-                    </form>
+                    <button style="font-size: 25px;" type="submit" >ENVIAR </button>
+                </form>
             </article>
         </section>
 
 
-
-
-        <video autoplay muted loop id="Mivideo">
-                    <source src="videodefondo.webm" type="video/webm">
-                    tu navegador no soporta videos HTML5.
-        </video>
-
         <footer>
-            <p>Derechos reservados &copy; 2025 - CROSANT & COFFE</p>
-            <p>lima-Perú</p>
+            <p>Derechos reservados &copy; 2025 - CROISSANT & COFFEE</p>
+            <p>Lima-Perú</p>
         </footer>
     </div>
+    
+    <script>
+        // CORRECCIÓN: Se movió el script interno al final del <body>. 
+        // El uso de document.write() DESTRUYE el contenido de la página si se ejecuta después de que el DOM carga.
+        // Se comentan los document.write para que no borren tu contenido.
+        
+        window.alert("Bienvenidos");
+        var valor1 = 40;  
+        var valor2 = 60;
+        var suma = valor1 + valor2;  
+        var resta = valor1 - valor2;
+        // document.write("<br><br><br> FIN DE PÁGINA"); // COMENTADO: Evita destruir el DOM
 
+        console.log("El valor de la suma de ", valor1, " con ", valor2, " es :", suma);
+        console.log("El valor de la resta de ", valor1, " con ", valor2, " es :", resta);
+        
+        // El siguiente innerHTML funciona correctamente ya que el elemento 'resultado' ya existe.
+        document.getElementById('resultado').innerHTML = "<br>El valor de la suma de " + valor1 + " con " + valor2 + " es :" + suma + "<br>" + "El valor de la resta de " + valor1 + " con " + valor2 + " es :" + resta;
+
+        // document.write("  <ul align='right'  style='color:rgb(47, 59, 34)'> " + // COMENTADO: Evita destruir el DOM
+        // " <li>Capacidad de atencion</li> " +
+        //     " <li>Consultar dudas no resueltas</li> " +
+        //     " <li>Repasar temas y realizar tareas en casa</li>" +
+        // " </ul> ");
+
+    </script>
+    
+    <video autoplay muted loop id="Mivideo">
+        <source src="videodefondo.webm" type="video/webm">
+        Tu navegador no soporta videos HTML5.
+    </video>
+    
+    <script type="text/javascript" src="script1.js" ></script> 
 </body>
-
 </html>

@@ -1,68 +1,74 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+header, nav, main, aside, footer {
+    padding: 20px;
+    margin: 10px;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+}
+nav {
+    background-color: #333;
+    color: white;
+}
+nav a {
+    color: white;
+    margin-right: 30px;
+    text-decoration: none;
+}
+/* Estilo para el contenedor de asides en main */
+.main-complementario {
+    display: flex;
+    flex-direction: column; /* Coloca los asides en columna */
+    flex: 1;
+}
+/* Corrección: El main debería ser el contenedor flex principal si quieres los asides al lado de la sección */
+main {
+    display: flex; 
+}
+section {
+    flex: 2;
+    background-color: #b92b2b;
+    padding: 10px;
+    border: 10px solid;
+    margin: 10px;
+}
+aside {
+    /* flex: 1; se eliminó ya que está en .main-complementario */
+    background-color: #99a7d6;
+    padding: 10px;
+    height: 200px;
+    width: 150px;
+    /* flex-direction: column; se movió a .main-complementario */
+}
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+article {
+    background-color: #d1dfa1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 5px solid #cccccc;
+}
+.contenedor {
+    max-width: 1280px;
+    margin: auto;
+}
 
-        }
-        header, nav, main, aside, footer {
-            padding: 20px;
-            margin: 10px;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-        }
-        nav a {
-            color: white;
-            margin-right: 30px;
-            text-decoration: none;
-        }
-        main {
-            display: flex; /*flexible para evitar superpociciones*/
-        }
-        section {
-            flex: 2;
-            background-color: #b92b2b;
-            padding: 10px;
-            border: 10px solid;
-            margin: 10px;
-        }
-        aside {
-            flex: 1;
-            background-color: #99a7d6;
-            padding: 10px;
-            height: 200px;
-            width: 150px;
-            flex-direction: column; /*coloca a los asides en una columna*/
-        }
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-        
-        }
-        article {
-            background-color: #d1dfa1;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 5px solid #cccccc;
-        }
-        .contenedor {
-            max-width: 1280px;
-            margin: auto;
-        }
-
-        .marget_imagens {
-            margin: 20px;
-        }
-    .imagen-flotante {
-       position: fixed;
-       top: 20px;       /* Distancia desde la parte superior */
-       right: 20px;     /* Distancia desde la derecha */
-       }
+.marget_imagens {
+    margin: 20px;
+}
+/* No encontré .imagen-flotante en tu HTML, pero el estilo es correcto */
+.imagen-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
 
 .aside_imagenes {
     background-color: azure;
@@ -78,20 +84,27 @@
 }
 
 .primera_letra {
-
     color: #b92b2b;
-
 }
 
+/* CORRECCIÓN: Se corrigió la unidad de medida de '150pxs' a '150px' */
 .primera_letra::first-letter {
     color: aqua;
-    font-size: 150pxs;
+    font-size: 150px; 
 }
 
-.color_link:first-child { font-weight: bold; }
+/* Nota: Este selector aplica a CUALQUIER .color_link que sea el primer hijo dentro de su padre */
+.color_link:first-child { 
+    font-weight: bold; 
+}
 
 .color_link::before { 
     content: "💡";
+}
+
+/* Estilo auxiliar para los div que contienen los ejemplos de posición */
+.pos-contenedor-inline {
+    display: inline-block;
 }
 
 .clase_static { 
@@ -109,22 +122,18 @@
     margin-right: 200px
 }
 
-
-
+/* --- POSICIONAMIENTO RELATIVE --- */
 .clase_relative {
     font-size: 20px;
     background-color: green;
     height: 250px;
     width: 200px;
 }
-
 .clase_relative:hover {
     position: relative;
     top: 100px;
     left: 100px;
 }
-/*Al usar position relative en la pseudoclase Hover, position se activa cuando se posiciona el mouse en la 
-imagen. Notese que como se ha utilizado top y left, esto causa la superposición de elementos .*/
 
 .clase_relative2 {
     font-size: 17px;
@@ -132,15 +141,11 @@ imagen. Notese que como se ha utilizado top y left, esto causa la superposición
     height: 250px;
     width: 200px;
 }
-
 .clase_relative2:hover {
     position: relative;
     margin-top: 100px;
     margin-left: 100px;
 }
-/*Al usar position relative en la pseudoclase Hover, position se activa cuando se posiciona el mouse en la imagen.
-Notese que como se ha utilizado Margin-top y Margin-left, esto causa la NO superposición de elementos , es
-decirseacomodalaposiciónparanogenerarcruces.*/
 
 .clase_relative3 {
     font-size: 17px;
@@ -148,41 +153,32 @@ decirseacomodalaposiciónparanogenerarcruces.*/
     height: 250px;
     width: 200px;
 }
-
 .clase_relative3:hover {
     position: relative;
     top: 100px;
     left: 100px;
-    z-index: -10; /*OJO:
-Signo (-) inidica hacia atrás
-Signo (+) inidica hacia adelante*/
+    z-index: -10;
 }
 
-
+/* --- POSICIONAMIENTO ABSOLUTE --- */
 .clase_Absolute {
     font-size: 20px;
     background-color: rgb(228, 189, 15);
     height: 150px;
     width: 150px;
     position: absolute;
-    top: 20px;/*empuja la imagen desde arriba top=arriba*/
-    left: 450px;/*empuja la imagen desde la izquierda left=izqueirda */
-
+    top: 20px;
+    left: 450px;
 }
-/*En la parte donde se coloco el código de position
-absolute no aparece la imagen correspondiente, y el
-texto que estaba en inline-block ocupo su lugar
-La imagen que esta en position absolute se ubico en
-la posición configurada, respecto al inicio del Body*/
 
 .clase_relative4 {
     font-size: 20px;
     background-color: orange;
     height: 200px;
     width: 200px;
-    position: relative;
-    
+    position: relative; 
 }
+
 .clase_AbsoluteRelative {
     font-size: 20px;
     background-color: orange;
@@ -193,6 +189,8 @@ la posición configurada, respecto al inicio del Body*/
     left: 600px;
     z-index: -5;
 }
+
+/* --- POSICIONAMIENTO FIXED --- */
 .clase_Fixed {
     height: 200px;
     width: 150px;
@@ -202,10 +200,11 @@ la posición configurada, respecto al inicio del Body*/
 }
 .marcaagua {
     opacity: 0.1;
-    pointer-events: none; /*se encarga que la marca de agua,no le afecte nada o ninguna complicación*/
+    pointer-events: none; 
     z-index: 999;
 }
 
+/* --- POSICIONAMIENTO STICKY --- */
 .clase_sticky {
     position: sticky;
     font-size: 20px;
@@ -217,20 +216,22 @@ la posición configurada, respecto al inicio del Body*/
     font-size: 20px;
 }
 
-.class_float_rigth2{
+/* --- FLOAT --- */
+.class_float_rigth2 {
     float: right;
     background-color: bisque;
     margin: 5px;
 }
 
+/* --- DISPLAY --- */
 .enlinea {
     background-color: red;
     display: inline;
     font-size: 30px;
     margin: 2px;
     color: azure;
-    width: 80px;
-    height: 40px;
+    width: 80px; /* No afecta a elementos inline */
+    height: 40px; /* No afecta a elementos inline */
 }
 
 .tipoinlineblock{
@@ -241,11 +242,13 @@ la posición configurada, respecto al inicio del Body*/
     display: inline-block;
     height: 500px;
 }
+
 .bloque{
     background-color: orange;
     font-size: 30px;
     margin: 10px;
     color: #cccccc;
+    display: block; /* Se añade explícitamente, aunque div es block por defecto */
 }
 .tiponone{
     background-color: blue;
@@ -263,49 +266,51 @@ la posición configurada, respecto al inicio del Body*/
     visibility: hidden;
 }
 
+/* --- GRID --- */
 .contenedor-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  gap: 15px; /* Espacio entre celdas */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
 .item img {
-     max-width: 100%; /* Para que no se desborde */
+    max-width: 100%;
 }
 
 .item {
- display: flex;
-  background-color: lightcoral;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #333;
-  font-size: 30px;
-   justify-content: center;  /* Centrar horizontalmente */
-  align-items: center;      /* Centrar verticalmente */
+    display: flex;
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #333;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
+/* --- VIDEO DE FONDO --- */
 #Mivideo{
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%; /*Asegura que el video ocupe al menos todo el ancho de su contenedor */
-    min-height: 100%; /*Asegura que el video ocupe al menos todo el alto de su contenedor */
+    min-width: 100%;
+    min-height: 100%;
     width: auto;
     height: auto;
     z-index: -1;
-    background-size: cover; /*imagen de fondo cubra todo el contenedor,
-                             incluso si tienes que recortarla o agrandarla. */
-    overflow: hidden; /*Oculta cualquier contenido que se salga del área visible del elemento */
+    background-size: cover;
+    overflow: hidden;
 }
 
-.claseNav { /*estilo para nav*/
-background-color: #d1dfa1;
-font-size: 15px;
-/*margin: 20px*/
-padding-inline: 0px;
-color: black;
-display: inline;
-list-style-type: none;
+/* --- NAVEGACIÓN (claseNav) --- */
+.claseNav { 
+    background-color: #d1dfa1;
+    font-size: 15px;
+    padding-inline: 0px;
+    color: black;
+    list-style-type: none;
+    /* Se elimina display: inline; para que los li puedan flotar correctamente */
+    padding: 0; /* Agregado para consistencia */
 }
 .claseNav a:hover{
     background-color: coral;
@@ -320,20 +325,21 @@ list-style-type: none;
 
 .claseNav li a {
     text-decoration: none;
-    padding: 0px;
+    padding: 10px; /* Agregado padding para que el hover se vea mejor */
     display: block;
 }
 
-.claseNav >li {
-    float: left;
+.claseNav > li {
+    display: inline-block; /* Mejor para el efecto de menú */
 }
 
 .claseNav li ul {
     display: none;
     position: absolute;
     min-width: 140px;
+    z-index: 10; /* Asegura que el submenú esté sobre otros elementos */
 }
 
-.claseNav li:hover>ul{
+.claseNav li:hover > ul {
     display: block;
 }
